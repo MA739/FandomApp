@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "142478628509",
+    "project_id": "fandomapp-5670e",
+    "storage_bucket": "fandomapp-5670e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142478628509:android:07e348aeb90a8be009e674",
+        "android_client_info": {
+          "package_name": "com.example.fandomapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142478628509-h5341l1vasi4fhadkiecs0uub32jgb7b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fandomapp",
+            "certificate_hash": "a7da83c314209c4c23a7ac6ec3a7442dffe1bfa3"
+          }
+        },
+        {
+          "client_id": "142478628509-31bpbcrn2ifndjf9r23vm3optsgdggda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCerDOjxJtv7JzqOvXUvSVGwvwA_NpzsXo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142478628509-31bpbcrn2ifndjf9r23vm3optsgdggda.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
