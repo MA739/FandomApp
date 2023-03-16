@@ -24,7 +24,7 @@ class Splash extends StatelessWidget {
     return Scaffold(
         body: Center(
             child: Image.asset(
-      'assets/myface.jpg',
+      'assets/notepad.png',
     )));
   }
 }
@@ -39,7 +39,7 @@ class SplashTransition extends StatelessWidget {
         //navigateAfterSeconds: new LoginPage(),
         navigateAfterSeconds: new authChoice(),
         title: new Text('Welcome to FandomApp'),
-        image: new Image.asset('assets/myface.jpg'),
+        image: new Image.asset('assets/notepad.png'),
         backgroundColor: Colors.white,
         styleTextUnderTheLoader: new TextStyle(),
         photoSize: 100.0,
@@ -72,8 +72,8 @@ class authChoice extends StatelessWidget {
           ),
           TextButton(
             style: TextButton.styleFrom(
+              foregroundColor: Colors.black,
               padding: const EdgeInsets.all(16.0),
-              primary: Colors.black,
               //textStyle: const TextStyle(Fontweight.bold),
             ),
             onPressed: () {
@@ -409,7 +409,9 @@ class RegistrationForm extends StatelessWidget {
                         TextButton(
                           onPressed: () => {
                             //navigates back to login page
-                            Navigator.of(context)..pop()..pop()
+                            Navigator.of(context)
+                              ..pop()
+                              ..pop()
                             //Navigator.pop(context, 'OK')
                           },
                           child: const Text('OK'),
@@ -665,9 +667,8 @@ class _ContentPageState extends State<ContentPage> {
         appBar: AppBar(
           title: const Text('FandomApp'),
           actions: <Widget>[
-            FlatButton(
-              textColor: Colors.white,
-              //logout action here. Well... pop up asking if they want to log out. On ok press, logout and return to login screen
+            TextButton(
+              style: flatButtonStyle,
               onPressed: () {
                 showDialog<String>(
                   //confirm user signout
@@ -689,8 +690,8 @@ class _ContentPageState extends State<ContentPage> {
                 );
               },
               child: Text("Log Out"),
-              shape: CircleBorder(side: BorderSide(color: Colors.transparent)),
-            ),
+              //shape: CircleBorder(side: BorderSide(color: Colors.transparent)),
+            )
           ],
         ),
         body: Center(
@@ -729,3 +730,13 @@ class _ContentPageState extends State<ContentPage> {
         );
   }
 }
+
+final ButtonStyle flatButtonStyle = TextButton.styleFrom(
+  foregroundColor: Colors.white,
+  minimumSize: Size(88, 44),
+  padding: EdgeInsets.symmetric(horizontal: 16.0),
+  shape: const RoundedRectangleBorder(
+    borderRadius: BorderRadius.all(Radius.circular(2.0)),
+  ),
+  backgroundColor: Colors.blue,
+);
